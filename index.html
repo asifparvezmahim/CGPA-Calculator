@@ -3,9 +3,9 @@
 <head>
    
    <title>CGPA Calculator</title>
-
    <link rel="stylesheet" type="text/css" href="assets/main.css">
-   <script src="assets/calculate.js"></script>
+   <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+   
 </head>
 <body>
    <div class="wrapper">
@@ -20,11 +20,11 @@
       </div>
       <div class="bodySection">
          <div class="courseWrapper">
-            <form>
+            <form class="form">
                
                <div class="inputField">
                   <input type="text" placeholder="Course Name" class="CourseNameField" required >
-                  <input type="number" placeholder="Credit Units" class="CreditField" value="" required>
+                  <input type="number" placeholder="Credit Units" class="CreditField" value="" id="credit" required>
                   <select class="gradeField" required>
                   <option class="grade" value="select" id="">Select</option>
                   <option class="grade" value="">A+</option>
@@ -38,18 +38,15 @@
                   <option class="grade" value="">D</option>
                   <option class="grade" value="">F</option>
                   </select>
-                  <div class="deleteBtnWrap"><button class="deleteBtn" name="deleteBtn" value="">-</button></div>             
+                  <div class="deleteBtnWrap"><button class="deleteBtn" id="deleteBtn" name="deleteBtn" value="">-</button></div>             
                </div>
-               
-
-               <div class="actionBtn" id="actionBtn">
-                  <input type="button" style="margin-right: 28px;" name="addCourseBtn" value="Add Course" id="add" class="add_course">
-                  <input type="button" style="border-radius: 4px 0px 0px 4px;" name="calculateBtn" value="Calculate" id="calculate_btn">
-                  <div id="showResult"><p>CGPA: 4.00</p></div>
-               </div>
-
             </form>
-          </div>
+         </div>
+         <div class="actionBtn" id="actionBtn">
+            <input type="button" style="margin-right: 28px;" name="addCourseBtn" value="Add Course" id="add" class="add_course">
+            <input type="button" style="border-radius: 4px 0px 0px 4px;" name="calculateBtn" value="Calculate" id="calculate_btn">
+            <div id="showResult"><p>CGPA: 4.00</p></div>
+         </div>
       </div>
       <div class="bottomSection">
          <p>© 2023 All rights reserved by <a href="teamPage.html">[Team Name]</a></p>
@@ -57,6 +54,6 @@
 
 
    </div>
-   
+<script src="assets/calculate.js"></script>
 </body>
 </html>
